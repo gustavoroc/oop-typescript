@@ -1,0 +1,19 @@
+{
+  "name": "desafio-typescript-iuul",
+  "version": "1.0.0",
+  "description": "Desafio para testar conhecimentos de orientacao a objetos com typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavoroc/oop-typescript.git"
+  },
+  "author": "Gustavo R. Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavoroc/oop-typescript/issues"
+  },
+  "homepage": "https://github.com/gustavoroc/oop-typescript#readme"
+}
