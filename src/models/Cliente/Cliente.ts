@@ -8,9 +8,9 @@ export class Cliente extends Pessoa implements IUsuario {
     cpf: string,
     nome: string,
     telefone: string,
-    private vip: boolean,
-    private conta: Conta,
-    private enderecos: Endereco[]
+    private _vip: boolean,
+    private _contas: Conta[],
+    private _enderecos: Endereco[]
   ) {
     super(cpf, nome, telefone);
   }
@@ -20,14 +20,22 @@ export class Cliente extends Pessoa implements IUsuario {
   }
 
   public listarEnderecos(): void {
-    this.enderecos.forEach((endereco, index) => {
-      console.log(`------${endereco}o Endereco -------`);
-      console.log(endereco);
-      console.log(`----------------------------------`);
-    });
+    console.log(this.enderecos);
   }
 
-  public getConta(): Conta {
-    return this.conta;
+  public get enderecos(): Endereco[] {
+    return this._enderecos;
+  }
+
+  public get contas(): Conta[] {
+    return this._contas;
+  }
+
+  public get vip(): boolean {
+    return this._vip;
+  }
+
+  public set vip(value: boolean) {
+    this._vip = value;
   }
 }
