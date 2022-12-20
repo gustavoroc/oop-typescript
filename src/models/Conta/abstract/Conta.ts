@@ -1,6 +1,6 @@
-import { ClientError } from "../../Error/ClientError";
-import { Credito } from "../Credito";
-import { Debito } from "../Debito";
+import { ClientError } from '../../Error/ClientError';
+import { Credito } from '../Credito';
+import { Debito } from '../Debito';
 
 export abstract class Conta {
   public credito: Credito[] = [];
@@ -18,7 +18,7 @@ export abstract class Conta {
       const debito = new Debito(valor, date, this.numero);
       this.debito.push(debito);
     } else {
-      throw new ClientError("Saldo insuficiente", 403);
+      throw new ClientError('Saldo insuficiente', 403);
     }
   }
 

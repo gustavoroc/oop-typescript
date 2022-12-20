@@ -1,4 +1,4 @@
-import { Conta } from "./abstract/Conta";
+import { Conta } from './abstract/Conta';
 
 export class ContaPoupanca extends Conta {
   constructor(private rentabilidadeMensal: number, numero: string) {
@@ -16,7 +16,7 @@ export class ContaPoupanca extends Conta {
       saldoAtual = saldoAtual - debito.getValor();
     });
 
-    return (saldoAtual * (this.rentabilidadeMensal * 0.01));
+    return saldoAtual * (this.rentabilidadeMensal * 0.01);
   }
 
   public calcularSaldo(): number {

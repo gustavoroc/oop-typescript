@@ -1,7 +1,7 @@
-import { Conta } from "../Conta/abstract/Conta";
-import { IUsuario } from "../IUsuario";
-import { Endereco } from "./Endereco";
-import { Pessoa } from "./abstract/pessoa";
+import { Conta } from '../Conta/abstract/Conta';
+import { IUsuario } from '../IUsuario';
+import { Endereco } from './Endereco';
+import { Pessoa } from './abstract/pessoa';
 
 export class Cliente extends Pessoa implements IUsuario {
   constructor(

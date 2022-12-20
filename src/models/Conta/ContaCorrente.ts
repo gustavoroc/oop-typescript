@@ -1,4 +1,4 @@
-import { Conta } from "./abstract/Conta";
+import { Conta } from './abstract/Conta';
 
 export class ContaCorrente extends Conta {
   constructor(private limite: number, numero: string) {

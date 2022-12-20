@@ -1,6 +1,6 @@
-import { Pessoa } from "../Cliente/abstract/pessoa";
-import { IUsuario } from "../IUsuario";
-import { Cargo } from "./Cargo";
+import { Pessoa } from '../Cliente/abstract/pessoa';
+import { IUsuario } from '../IUsuario';
+import { Cargo } from './Cargo';
 
 export class Funcionario extends Pessoa implements IUsuario {
   constructor(
