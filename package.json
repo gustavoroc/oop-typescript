@@ -4,7 +4,7 @@
   "description": "Desafio para testar conhecimentos de orientacao a objetos com typescript",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "start": "tsc && node ./dist/index.js"
   },
   "repository": {
     "type": "git",
