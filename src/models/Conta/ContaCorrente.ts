@@ -1,37 +1,26 @@
-import { Conta } from "./abstract/Conta"
+import { Conta } from "./abstract/Conta";
 
 export class ContaCorrente extends Conta {
-    constructor(
-        private limite: number,
-        numero: string
-        ) {
-            super(numero)
-        }
-        
-    public transferir(
-            contaDestino: Conta,
-            valor: number
-            ): void {
-                if (this.calcularSaldo() >= valor) {
-                    contaDestino.depositar(valor)
-                } else {
-                    console.log("Não foi possivel efetuar a operação, seu saldo não é suficiente!")
-                }
-        }
-        
-    public calcularSaldo(): number {
-        let saldoTotal = this.limite
+  constructor(private limite: number, numero: string) {
+    super(numero);
+  }
 
-        this.credito.forEach((credito) => {
-            saldoTotal = saldoTotal + credito.getValor()
-        })
+  public transferir(contaDestino: Conta, valor: number): void {
+    this.sacar(valor);
+    contaDestino.depositar(valor);
+  }
 
-        this.debito.forEach((debito) => {
-            saldoTotal = saldoTotal - debito.getValor()
-        })
+  public calcularSaldo(): number {
+    let saldoTotal = this.limite;
 
-        return saldoTotal
+    this.credito.forEach((credito) => {
+      saldoTotal = saldoTotal + credito.getValor();
+    });
 
-    }
-    
+    this.debito.forEach((debito) => {
+      saldoTotal = saldoTotal - debito.getValor();
+    });
+
+    return saldoTotal;
+  }
 }
