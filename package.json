@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "style:fix": "prettier --write src/**/*",
+    "start": "npm run test_1 && npm run test_2 && npm run test_3 && npm run test_4 && npm run test_5",
     "test_1": "tsc && node dist/aplicacoes/aplicacao_1.js",
     "test_2": "tsc && node dist/aplicacoes/aplicacao_2.js",
     "test_3": "tsc && node dist/aplicacoes/aplicacao_3.js",
