@@ -8,14 +8,14 @@ export abstract class Conta {
 
   constructor(private numero: string) {}
 
-  public depositar(valor: number): void {
-    const credito = new Credito(valor, new Date(), this.numero);
+  public depositar(valor: number, date = new Date()): void {
+    const credito = new Credito(valor, date, this.numero);
     this.credito.push(credito);
   }
 
-  public sacar(valor: number): void {
+  public sacar(valor: number, date = new Date()): void {
     if (this.calcularSaldo() >= valor) {
-      const debito = new Debito(valor, new Date(), this.numero);
+      const debito = new Debito(valor, date, this.numero);
       this.debito.push(debito);
     } else {
       throw new ClientError("Saldo insuficiente", 403);
