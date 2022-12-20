@@ -16,7 +16,7 @@ export class ContaPoupanca extends Conta {
       saldoAtual = saldoAtual - debito.getValor();
     });
 
-    return (saldoAtual * this.rentabilidadeMensal) / 10000;
+    return (saldoAtual * (this.rentabilidadeMensal * 0.01));
   }
 
   public calcularSaldo(): number {
