@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "style:fix": "prettier --write src/**/*.ts",
     "test_1": "tsc && node dist/aplicacoes/aplicacao_1.js",
     "test_2": "tsc && node dist/aplicacoes/aplicacao_2.js",
     "test_3": "tsc && node dist/aplicacoes/aplicacao_3.js",
